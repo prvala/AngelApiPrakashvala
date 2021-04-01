@@ -31,7 +31,7 @@ string PrivateKey = ConfigurationManager.AppSettings["PrivateKey"].ToString();
 ```csharp 
 AngelBroking a = new AngelBroking(root, UserType, SourceID, ClientLocalIP, ClientPublicIP, MACAddress, PrivateKey);
 ```
-#### OutputBaseClass is common class to hold output across all application Methods.
+//OutputBaseClass is common class to hold output across all application Methods.
 
 //Login Call
 ```csharp 
