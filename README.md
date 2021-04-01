@@ -10,7 +10,9 @@ Execute orders in real time, manage user portfolio, stream live market data (Web
 Download smartapi-dotnet.dll file and add reference to your desktop/web application 
 
 Include Newtonsoft.Json.dll from Package manager console as follow
-PM> Install-Package Newtonsoft.Json 
+
+PM> Install-Package Newtonsoft.Json. 
+For More details (https://www.nuget.org/packages/Newtonsoft.Json/)
 
 
 ## API Usage
