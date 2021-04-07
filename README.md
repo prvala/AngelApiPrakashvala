@@ -81,7 +81,7 @@ ord.transactiontype = Constants.TRANSACTION_TYPE_BUY;
 ord.exchange = Constants.EXCHANGE_NSE;
 ord.ordertype = Constants.ORDER_TYPE_LIMIT;
 ord.producttype = Constants.PRODUCT_TYPE_DELIVERY;
-ord.duration = Constants.VALIDITY_DAY.ToString();
+ord.duration = Constants.VALIDITY_DAY;
 ord.price = "370.00";
 ord.squareoff = "0";
 ord.stoploss = "0";
@@ -103,7 +103,7 @@ ord.transactiontype = Constants.TRANSACTION_TYPE_BUY;
 ord.exchange = Constants.EXCHANGE_NSE;
 ord.ordertype = Constants.ORDER_TYPE_LIMIT;
 ord.producttype = Constants.PRODUCT_TYPE_DELIVERY;
-ord.duration = Constants.VALIDITY_DAY.ToString();
+ord.duration = Constants.VALIDITY_DAY;
 ord.price = "357.00";
 ord.squareoff = "0";
 ord.stoploss = "0";
@@ -151,7 +151,7 @@ OutputBaseClass  obj = a.getPosition(token);
 // initialize object for conversion request and input it to method with token 
 ```csharp 
 ConvertPositionRequest req = new ConvertPositionRequest();
-req.exchange = Constants.EXCHANGE_NSE.ToString();
+req.exchange = Constants.EXCHANGE_NSE;
 req.oldproducttype =Constants.PRODUCT_CNC;
 req.newproducttype = Constants.PRODUCT_MIS;
 req.tradingsymbol = "SBIN-EQ";
