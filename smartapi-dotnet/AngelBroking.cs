@@ -9,6 +9,193 @@ using System.Web;
 
 namespace smartapi_dotnet
 {
+    #region Constants
+
+    public class Constants
+    {
+
+        // Products
+        public const string PRODUCT_MIS = "MIS";
+        public const string PRODUCT_CNC = "CNC";
+        public const string PRODUCT_NRML = "NRML";
+
+        public const string PRODUCT_TYPE_DELIVERY = "DELIVERY";
+        public const string PRODUCT_TYPE_MARGIN = "MARGIN";
+        public const string PRODUCT_TYPE_INTRADAY = "INTRADAY";
+        public const string PRODUCT_TYPE_BO = "BO";
+        // Order types
+        public const string ORDER_TYPE_MARKET = "MARKET";
+        public const string ORDER_TYPE_LIMIT = "LIMIT";
+        public const string ORDER_TYPE_SLM = "SL-M";
+        public const string ORDER_TYPE_SL = "SL";
+
+        // Order status
+        public const string ORDER_STATUS_COMPLETE = "COMPLETE";
+        public const string ORDER_STATUS_CANCELLED = "CANCELLED";
+        public const string ORDER_STATUS_REJECTED = "REJECTED";
+
+        // Varities
+        public const string VARIETY_NORMAL = "NORMAL";
+        public const string VARIETY_STOPLOSS = "STOPLOSS";
+        public const string VARIETY_ROBO= "ROBO";
+        public const string VARIETY_AMO = "amo";
+
+        // Transaction type
+        public const string TRANSACTION_TYPE_BUY = "BUY";
+        public const string TRANSACTION_TYPE_SELL = "SELL";
+
+        // Validity
+        public const string VALIDITY_DAY = "DAY";
+        public const string VALIDITY_IOC = "IOC";
+
+        // Exchanges
+        public const string EXCHANGE_NSE = "NSE";
+        public const string EXCHANGE_BSE = "BSE";
+        public const string EXCHANGE_NFO = "NFO";
+        public const string EXCHANGE_CDS = "CDS";
+        public const string EXCHANGE_BFO = "BFO";
+        public const string EXCHANGE_MCX = "MCX";
+
+        // Margins segments
+        public const string MARGIN_EQUITY = "equity";
+        public const string MARGIN_COMMODITY = "commodity";
+
+        // Ticker modes
+        public const string MODE_FULL = "full";
+        public const string MODE_QUOTE = "quote";
+        public const string MODE_LTP = "ltp";
+
+        // Positions
+        public const string POSITION_DAY = "day";
+        public const string POSITION_OVERNIGHT = "overnight";
+
+        // Historical intervals
+        public const string INTERVAL_MINUTE = "minute";
+        public const string INTERVAL_3MINUTE = "3minute";
+        public const string INTERVAL_5MINUTE = "5minute";
+        public const string INTERVAL_10MINUTE = "10minute";
+        public const string INTERVAL_15MINUTE = "15minute";
+        public const string INTERVAL_30MINUTE = "30minute";
+        public const string INTERVAL_60MINUTE = "60minute";
+        public const string INTERVAL_DAY = "day";
+
+        // GTT status
+        public const string GTT_ACTIVE = "active";
+        public const string GTT_TRIGGERED = "triggered";
+        public const string GTT_DISABLED = "disabled";
+        public const string GTT_EXPIRED = "expired";
+        public const string GTT_CANCELLED = "cancelled";
+        public const string GTT_REJECTED = "rejected";
+        public const string GTT_DELETED = "deleted";
+
+
+        // GTT trigger type
+        public const string GTT_TRIGGER_OCO = "two-leg";
+        public const string GTT_TRIGGER_SINGLE = "single";
+    }
+    //public enum ProductTypes
+    //{
+    //    MIS,
+    //    CNC,
+    //    NRML
+    //}    
+    //public enum ProductDelivery
+    //{
+    //    DELIVERY,
+    //    INTRADAY
+    //}
+    //public enum OrderTypes
+    //{
+    //    MARKET,
+    //    LIMIT,
+    //    SL,
+    //    SLM
+    //}
+    //public enum VarietyTypes
+    //{
+    //    NORMAL,
+    //    BO,
+    //    CO,
+    //    AMO
+    //}
+    //public enum TransactionTypes
+    //{
+    //    Buy,
+    //    Sell
+    //}
+    //public enum PositionTypes
+    //{
+    //    Day,
+    //    Overnight
+    //}
+    //public enum Exchanges
+    //{
+    //    NSE,
+    //    BSE,
+    //    NFO,
+    //    CDS,
+    //    MCX
+    //}
+    //public enum Segments
+    //{
+    //    Equity,
+    //    Commodity,
+    //    Futures,
+    //    Currency
+    //}
+    //public enum GTTStatus
+    //{
+    //    active,
+    //    triggered,
+    //    disabled,
+    //    expired,
+    //    cancelled,
+    //    rejected,
+    //    deleted
+    //}
+    //public enum GTTTriggerType
+    //{
+    //    twoleg,
+    //    single
+    //}
+    //public enum TickerModes
+    //{
+    //    Full,
+    //    Quote,
+    //    LTP
+    //}
+    //public enum ValidityTypes
+    //{
+    //    DAY,
+    //    IOC,
+    //    AMO
+    //}
+    //public enum CandleIntervals
+    //{
+    //    Minute,
+    //    ThreeMinute,
+    //    FiveMinute,
+    //    TenMinute,
+    //    FifteenMinute,
+    //    ThirtyMinute,
+    //    SixtyMinute,
+    //    Day
+    //}
+    //public enum SIPFrequency
+    //{
+    //    Weekly,
+    //    Monthly,
+    //    Quarterly
+    //}
+    //public enum SIPStatus
+    //{
+    //    Active,
+    //    Paused
+    //}
+
+
+    #endregion
+
     #region  AngelBrokingModel
     public class AngelToken
     {
@@ -60,23 +247,21 @@ namespace smartapi_dotnet
         public string transactiontype { get; set; }
         public int quantity { get; set; }
         public string type { get; set; }
-        public string symboltoken { get; set; }
-        public string producttype { get; set; }
-        public string symbolname { get; set; }
-        public string instrumenttype { get; set; }
-        public string priceden { get; set; }
-        public string pricenum { get; set; }
-        public string genden { get; set; }
-        public string gennum { get; set; }
-        public string precision { get; set; }
-        public string multiplier { get; set; }
-        public string boardlotsize { get; set; }
-        public string buyqty { get; set; }
-        public string sellqty { get; set; }
-        public string buyamount { get; set; }
-        public string sellamount { get; set; }
-     
-       
+        //public string symboltoken { get; set; }
+        //public string producttype { get; set; }
+        //public string symbolname { get; set; }
+        //public string instrumenttype { get; set; }
+        //public string priceden { get; set; }
+        //public string pricenum { get; set; }
+        //public string genden { get; set; }
+        //public string gennum { get; set; }
+        //public string precision { get; set; }
+        //public string multiplier { get; set; }
+        //public string boardlotsize { get; set; }
+        //public string buyqty { get; set; }
+        //public string sellqty { get; set; }
+        //public string buyamount { get; set; }
+        //public string sellamount { get; set; }
     }
 
     public class CreateRuleRequest
@@ -92,6 +277,12 @@ namespace smartapi_dotnet
         public string triggerprice { get; set; }
         public string disclosedqty { get; set; }
         public string timeperiod { get; set; }
+    }
+    public class CancelRuleRequest
+    {
+        public string id { get; set; }
+        public string symboltoken { get; set; }
+        public string exchange { get; set; }
     }
     public class RuleListRequest
     {
@@ -324,7 +515,7 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
@@ -422,7 +613,7 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
@@ -669,12 +860,12 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
                 {
-                    agr = JsonConvert.DeserializeObject<AngelTokenResponse>(Token.ToString());
+                  
                     if (ValidateToken(Token))
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/portfolio/v1/getHolding";
@@ -718,12 +909,12 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
                 {
-                    agr = JsonConvert.DeserializeObject<AngelTokenResponse>(Token.ToString());
+                  
                     if (ValidateToken(Token))
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/order/v1/getPosition";
@@ -767,7 +958,7 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
@@ -914,7 +1105,7 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
@@ -959,12 +1150,12 @@ namespace smartapi_dotnet
             }
             return res;
         }
-        public OutputBaseClass cancelRule(CreateRuleRequest ruleRequest, AngelToken Token)
+        public OutputBaseClass cancelRule(CancelRuleRequest ruleRequest, AngelToken Token)
         {
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
@@ -1014,12 +1205,12 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
+            
             try
             {
                 if (Token != null)
                 {
-                    agr = JsonConvert.DeserializeObject<AngelTokenResponse>(Token.ToString());
+                  
                     if (ValidateToken(Token))
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/gtt/v1/ruleDetails";
@@ -1065,12 +1256,10 @@ namespace smartapi_dotnet
             OutputBaseClass res = new OutputBaseClass();
             res.status = true;
             res.http_code = 200;
-            AngelTokenResponse agr = new AngelTokenResponse();
             try
             {
                 if (Token != null)
                 {
-                    agr = JsonConvert.DeserializeObject<AngelTokenResponse>(Token.ToString());
                     if (ValidateToken(Token))
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/gtt/v1/ruleList";
