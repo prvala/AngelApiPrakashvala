@@ -74,17 +74,18 @@ OutputBaseClass obj = a.GetProfile(token);
 ```csharp 
 OrderInfo ord = new OrderInfo();
 ord.variety = "NORMAL";
+ord.variety = Constants.VARIETY_NORMAL;
 ord.tradingsymbol = "SBIN-EQ";
 ord.symboltoken = "3045";
-ord.transactiontype = "BUY";
-ord.exchange = "NSE";
-ord.ordertype = "MARKET";
-ord.producttype = "INTRADAY";
-ord.duration = "DAY";
-ord.price = "360.00";
+ord.transactiontype = Constants.TRANSACTION_TYPE_BUY;
+ord.exchange = Constants.EXCHANGE_NSE;
+ord.ordertype = Constants.ORDER_TYPE_LIMIT;
+ord.producttype = Constants.PRODUCT_TYPE_DELIVERY;
+ord.duration = Constants.VALIDITY_DAY.ToString();
+ord.price = "370.00";
 ord.squareoff = "0";
 ord.stoploss = "0";
-ord.quantity = "5";
+ord.quantity = "10";
 
 OutputBaseClass obj = a.placeOrder(ord, token);
 ```
@@ -95,18 +96,18 @@ OutputBaseClass obj = a.placeOrder(ord, token);
 ```csharp 
 OrderInfo ord = new OrderInfo();
 ord.orderid = "210323000000313";
-ord.variety = "NORMAL";
+ord.variety = Constants.VARIETY_NORMAL;
 ord.tradingsymbol = "SBIN-EQ";
 ord.symboltoken = "3045";
-ord.transactiontype = "BUY";
-ord.exchange = "NSE";
-ord.ordertype = "MARKET";
-ord.producttype = "INTRADAY";
-ord.duration = "DAY";
-ord.price = "363.00";
+ord.transactiontype = Constants.TRANSACTION_TYPE_BUY;
+ord.exchange = Constants.EXCHANGE_NSE;
+ord.ordertype = Constants.ORDER_TYPE_LIMIT;
+ord.producttype = Constants.PRODUCT_TYPE_DELIVERY;
+ord.duration = Constants.VALIDITY_DAY.ToString();
+ord.price = "357.00";
 ord.squareoff = "0";
 ord.stoploss = "0";
-ord.quantity = "5";
+ord.quantity = "20";
 
 OutputBaseClass obj = a.modifyOrder(ord, token);
 ```
@@ -116,8 +117,8 @@ OutputBaseClass obj = a.modifyOrder(ord, token);
 // Cancel order will return orderid in case successfull order cancel
 ```csharp 
 OrderInfo ord = new OrderInfo();
-ord.orderid = "210323000000313";
-ord.variety = "NORMAL";
+ord.orderid = "210406000000127";
+ord.variety = Constants.VARIETY_NORMAL;
 OutputBaseClass obj = a.cancelOrder(ord, token);
 ```
 
@@ -150,27 +151,13 @@ OutputBaseClass  obj = a.getPosition(token);
 // initialize object for conversion request and input it to method with token 
 ```csharp 
 ConvertPositionRequest req = new ConvertPositionRequest();
-req.exchange = "NSE";
-req.oldproducttype = "DELIVERY";
-req.newproducttype = "MARGIN";
+req.exchange = Constants.EXCHANGE_NSE.ToString();
+req.oldproducttype =Constants.PRODUCT_CNC;
+req.newproducttype = Constants.PRODUCT_MIS;
 req.tradingsymbol = "SBIN-EQ";
-req.transactiontype = "BUY";
+req.transactiontype = Constants.TRANSACTION_TYPE_BUY;
 req.quantity = 1;
-req.type = "DAY";
-
-req.symbolname = "SBIN";
-req.instrumenttype = "";
-req.priceden = "1";
-req.pricenum = "1";
-req.genden = "1";
-req.gennum = "1";
-req.precision = "2";
-req.multiplier = "-1";
-req.boardlotsize = "1";
-req.buyqty = "1";
-req.sellqty = "0";
-req.buyamount = "365.00";
-req.sellamount = "0";
+req.type = Constants.VALIDITY_DAY;
 
 OutputBaseClass obj = a.convertPosition(req, token);
 ```
@@ -180,12 +167,12 @@ OutputBaseClass obj = a.convertPosition(req, token);
 CreateRuleRequest req = new CreateRuleRequest();
 req.tradingsymbol = "SBIN-EQ";
 req.symboltoken = "3045";
-req.exchange = "NSE";
-req.transactiontype = "BUY";
-req.producttype = "DELIVERY";
-req.price = "195";
-req.qty = "1";
-req.triggerprice = "196";
+req.exchange = Constants.EXCHANGE_NSE;
+req.transactiontype = Constants.TRANSACTION_TYPE_BUY;
+req.producttype = Constants.PRODUCT_TYPE_MARGIN;
+req.price = "350";
+req.qty = "10";
+req.triggerprice = "370";
 req.disclosedqty = "10";
 req.timeperiod = "20";
 
@@ -202,15 +189,15 @@ OutputBaseClass obj = a.ruleDetails(RuleID, token);
 /** Modify Gtt Rule */
 ```csharp 
 CreateRuleRequest req = new CreateRuleRequest();
-req.id = "1000059";
+req.id = "1000118";
 req.tradingsymbol = "SBIN-EQ";
 req.symboltoken = "3045";
-req.exchange = "NSE";
-req.transactiontype = "BUY";
-req.producttype = "DELIVERY";
-req.price = "195";
-req.qty = "1";
-req.triggerprice = "196";
+req.exchange = Constants.EXCHANGE_NSE;
+req.transactiontype = Constants.TRANSACTION_TYPE_BUY;
+req.producttype = Constants.PRODUCT_TYPE_MARGIN;
+req.price = "350";
+req.qty = "10";
+req.triggerprice = "360";
 req.disclosedqty = "10";
 req.timeperiod = "20";
 
@@ -219,10 +206,10 @@ OutputBaseClass obj = a.modifyRule(req, token);
 
 /** Cancel Gtt Rule */
 ```csharp 
-CreateRuleRequest req = new CreateRuleRequest();
-req.id = "1000059";
-req.tradingsymbol = "SBIN-EQ";
-req.exchange = "NSE";
+CancelRuleRequest req = new CancelRuleRequest();
+req.id = "1000117";
+req.symboltoken = "3045";
+req.exchange = Constants.EXCHANGE_NSE;
 
 OutputBaseClass obj = a.cancelRule(req, token);
 ```
@@ -245,11 +232,11 @@ OutputBaseClass obj = a.ruleList(req, token);
 /** Historic Data */
 ```csharp 
 CandleRequest req = new CandleRequest();
-req.exchange = "NSE";
+req.exchange =Constants.EXCHANGE_NSE;
 req.symboltoken = "3045";
-req.interval = "MINUTE";
-req.fromdate = "2021-03-30 09:00";
-req.todate = "2021-03-30 09:20";
+req.interval = Constants.INTERVAL_MINUTE;
+req.fromdate = "2021-02-08 09:00";
+req.todate = "2021-02-08 09:16";
 
 OutputBaseClass obj = a.GetCandleData(req, token);
 ```
