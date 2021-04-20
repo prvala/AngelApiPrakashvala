@@ -17,7 +17,7 @@ For More details (https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ## API Usage
 
-#### Initialize Samart API using clientcode and password. 
+#### Initialize Samart API using clientcode and password JWTToken and Refresh Token is optional if provided login is not necessory 
 
 ```
 string Client_code = "";  //YOUR CLIENT CODE
