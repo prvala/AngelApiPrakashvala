@@ -21,7 +21,7 @@ For More details (https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ```
 string Client_code = "";  //YOUR CLIENT CODE
-string Password = ""; //YOUR PAS SWORD
+string Password = ""; //YOUR PASSWORD
 string api_key = "";
 string JWTToken = "";  // optional
 string RefreshToken = ""; // optional
