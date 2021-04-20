@@ -1,4 +1,3 @@
-yogesh
 # smartapi-dotnet
 
 ## Smart API Using C# Asp. Net
