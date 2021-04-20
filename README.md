@@ -39,7 +39,6 @@ AngelToken agr = obj.TokenResponse;
 obj = connect.GenerateToken();
 agr = obj.TokenResponse;
 
-
 //Get Profile
 obj = connect.GetProfile();
 GetProfileResponse gp = obj.GetProfileResponse;
