@@ -13,8 +13,9 @@ namespace AngelBroking
         protected string USER = "USER", SourceID = "WEB", PrivateKey = "";
         static string ClientPublicIP = "", ClientLocalIP = "", MACAddress = "";
 
-        protected string APIURL = "https://openapisuat.angelbroking.com";
-        // protected string APIURL = "https://apiconnect.angelbroking.com"; //prod endpoint
+        //protected string APIURL = "https://openapisuat.angelbroking.com";
+        protected string APIURL = "https://apiconnect.angelbroking.com"; //prod endpoint
+
         AngelToken Token { get; set; }
 
         /*Constructors*/
