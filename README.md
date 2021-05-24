@@ -223,8 +223,8 @@ CandleDataResponse cd = obj.GetCandleDataResponse;
 obj = connect.LogOut(Client_code);
 LogOutResponse lg = obj.LogOutResponse;
 
-##Getting started with SmartAPI Websocket's
-########################### Socket Sample Code Starts Here ###########################
+## Getting started with SmartAPI Websocket's
+## ######################### Socket Sample Code Starts Here ###########################
  
 Please follow below step in order to implement socket using dot net library
 
@@ -301,10 +301,7 @@ static void WriteResult(object sender, MessageEventArgs e)
 
 }
 
-
-
-
- ########################### Socket Sample Code Ends Here ###########################
+ ## ######################### Socket Sample Code Ends Here ###########################
 ```
 
 
