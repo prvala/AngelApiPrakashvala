@@ -226,6 +226,50 @@ LogOutResponse lg = obj.LogOutResponse;
 ```
 
 ## Getting started with SmartAPI Websocket's ##
+
+### -------------Socket Sample Code to get stock quotes Starts Here ------------
+```
+string Client_code = "";  YOUR CLIENT CODE
+string Password = ""; YOUR PAS SWORD
+string api_key = "";
+string JWTToken = "";   optional
+string RefreshToken = "";  optional
+
+SmartApi connect = new SmartApi(api_key, JWTToken, RefreshToken);
+
+OutputBaseClass obj = new OutputBaseClass();
+
+//Login by client code and password
+obj = connect.GenerateSession(Client_code, Password);
+AngelToken sagr = obj.TokenResponse;
+
+//Get Token
+obj = connect.GenerateToken();
+sagr = obj.TokenResponse;
+
+WebSocket _WS = new WebSocket();
+var exitEvent = new ManualResetEvent(false);
+
+_WS.ConnectforStockQuote(sagr.feedToken, Client_code);
+if (_WS.IsConnected())
+{
+   string script = "", TASK="";  // SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
+
+   _WS.RunScript(sagr.feedToken, Client_code, script, TASK);
+   _WS.MessageReceived += WriteResult;
+   
+  _WS.Close(true); to stop and close socket connection
+}
+exitEvent.WaitOne();
+
+
+static void WriteResult(object sender, MessageEventArgs e)
+{
+ Console.WriteLine("Tick Received : " + e.Message);
+}
+```
+### --------------- Socket Sample Code Ends Here -------------
+ 
 ### -------------Socket Sample Code to get current orders status Starts Here ------------
 
 Please follow below step in order to implement socket using dot net library
@@ -267,7 +311,7 @@ Please follow below step in order to implement socket using dot net library
   sord.ordertype = Constants.ORDER_TYPE_LIMIT;
   sord.producttype = Constants.PRODUCT_TYPE_INTRADAY;
   sord.duration = Constants.VALIDITY_DAY.ToString();
-  sord.price = "19500";
+  sord.price = "400";
   sord.squareoff = "0";
   sord.stoploss = "0";
   sord.quantity = "1";
