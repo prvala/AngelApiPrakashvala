@@ -225,7 +225,7 @@ LogOutResponse lg = obj.LogOutResponse;
 
 ```
 ```diff
--## Getting started with SmartAPI Websocket's
+## Getting started with SmartAPI Websocket's
 ### ######################### Socket Sample Code Starts Here ###########################
 ```
  
