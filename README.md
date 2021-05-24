@@ -224,8 +224,10 @@ obj = connect.LogOut(Client_code);
 LogOutResponse lg = obj.LogOutResponse;
 
 ```
-## Getting started with SmartAPI Websocket's
+```diff
+-## Getting started with SmartAPI Websocket's
 ### ######################### Socket Sample Code Starts Here ###########################
+```
  
 Please follow below step in order to implement socket using dot net library
 
