@@ -235,11 +235,11 @@ Step 3 : Connect socket using feedToken, jwtToken, Client_code, api_key.
 Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
 
 
- string Client_code = "";  YOUR CLIENT CODE
-  string Password = ""; YOUR PAS SWORD
-  string api_key = "";
-  string JWTToken = "";   optional
-  string RefreshToken = "";  optional
+``` string Client_code = "";  YOUR CLIENT CODE
+ string Password = ""; YOUR PAS SWORD
+ string api_key = "";
+ string JWTToken = "";   optional
+ string RefreshToken = "";  optional
 
   SmartApi connect = new SmartApi(api_key, JWTToken, RefreshToken);
 
@@ -301,7 +301,7 @@ static void WriteResult(object sender, MessageEventArgs e)
   Console.WriteLine("Tick Received : " + e.Message);
 
 }
-
+```
  ### ######################### Socket Sample Code Ends Here ###########################
 
 
