@@ -224,11 +224,10 @@ obj = connect.LogOut(Client_code);
 LogOutResponse lg = obj.LogOutResponse;
 
 ```
-```diff
-## Getting started with SmartAPI Websocket's
-### ######################### Socket Sample Code Starts Here ###########################
-```
- 
+
+## Getting started with SmartAPI Websocket's ##
+### ###################### Socket Sample Code Starts Here ###########################
+
 Please follow below step in order to implement socket using dot net library
 
 Step 1 : Inititalize Liberary with Crerentials.
@@ -236,8 +235,8 @@ Step 2 : Login with user name and password and generate token for connecting sco
 Step 3 : Connect socket using feedToken, jwtToken, Client_code, api_key.
 Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
 
-
-``` string Client_code = "";  YOUR CLIENT CODE
+``` 
+ string Client_code = "";  YOUR CLIENT CODE
  string Password = ""; YOUR PAS SWORD
  string api_key = "";
  string JWTToken = "";   optional
@@ -304,7 +303,7 @@ static void WriteResult(object sender, MessageEventArgs e)
 
 }
 ```
- ### ######################### Socket Sample Code Ends Here ###########################
+ ### ####################### Socket Sample Code Ends Here #########################
 
 
 
