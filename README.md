@@ -226,7 +226,7 @@ LogOutResponse lg = obj.LogOutResponse;
 ```
 
 ## Getting started with SmartAPI Websocket's ##
-### ###################### Socket Sample Code Starts Here ###########################
+### -------------Socket Sample Code Starts Here ------------
 
 Please follow below step in order to implement socket using dot net library
 
@@ -296,14 +296,14 @@ Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
   }
   exitEvent.WaitOne();
 
-
+//Function to Receive Message
 static void WriteResult(object sender, MessageEventArgs e)
 {
   Console.WriteLine("Tick Received : " + e.Message);
 
 }
 ```
- ### ####################### Socket Sample Code Ends Here #########################
+ ### --------------- Socket Sample Code Ends Here -------------
 
 
 
