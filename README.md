@@ -228,6 +228,14 @@ LogOutResponse lg = obj.LogOutResponse;
 ## Getting started with SmartAPI Websocket's ##
 
 ### -------------Socket Sample Code to get stock quotes Starts Here ------------
+
+Please follow below step in order to implement socket using dot net library
+
+1. Inititalize liberary with crerentials.
+2. Login with user name and password and generate token for connecting scoket.
+3. Connect socket using feedToken, Client_code.
+4. Create a script for required stock watchlist and decide the action for sending script.
+
 ```
 string Client_code = "";  YOUR CLIENT CODE
 string Password = ""; YOUR PAS SWORD
