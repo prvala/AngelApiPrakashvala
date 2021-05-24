@@ -226,14 +226,14 @@ LogOutResponse lg = obj.LogOutResponse;
 ```
 
 ## Getting started with SmartAPI Websocket's ##
-### -------------Socket Sample Code Starts Here ------------
+### -------------Socket Sample Code to get current orders status Starts Here ------------
 
 Please follow below step in order to implement socket using dot net library
 
-Step 1 : Inititalize Liberary with Crerentials.
-Step 2 : Login with user name and password and generate token for connecting scoket & placing orders.
-Step 3 : Connect socket using feedToken, jwtToken, Client_code, api_key.
-Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
+1. Inititalize liberary with crerentials.
+2. Login with user name and password and generate token for connecting scoket & placing orders.
+3. Connect socket using feedToken, jwtToken, Client_code, api_key.
+4. Send Message for Order_feed and add subsriber to receive mesages.
 
 ``` 
  string Client_code = "";  YOUR CLIENT CODE
@@ -246,18 +246,18 @@ Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
 
   OutputBaseClass obj = new OutputBaseClass();
 
-  Login by client code and password
+  // Login by client code and password
   obj = connect.GenerateSession(Client_code, Password);
   AngelToken sagr = obj.TokenResponse;
 
-  Get Token
+  //Get Token
   obj = connect.GenerateToken();
   sagr = obj.TokenResponse;
 
   WebSocket _WS2 = new WebSocket();
   var exitEvent = new ManualResetEvent(false);
 
-  Place Order
+  // Place Order
   OrderInfo sord = new OrderInfo();
   sord.variety = Constants.VARIETY_NORMAL;
   sord.tradingsymbol = "SBIN-EQ";
@@ -275,7 +275,7 @@ Step 4 : Send Message for Order_feed and subsribe to receiver mesages.
   obj = connect.placeOrder(sord);
   OrderResponse sOres = obj.PlaceOrderResponse;
 
-  get Order Book
+  // get Order Book
   obj = connect.getOrderBook();
   GetOrderBookResponse book = obj.GetOrderBookResponse;
 
