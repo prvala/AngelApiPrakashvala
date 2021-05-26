@@ -17,13 +17,13 @@ For More details (https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ## API Usage
 
-#### Initialize Samart API using clientcode and password JWTToken and Refresh Token is optional if provided login is not necessory 
+#### Initialize Smart API using clientcode and password JWTToken and Refresh Token is optional if provided login is not necessary 
 
 ```
-string Client_code = "";  //YOUR CLIENT CODE
+string Client_code = "“; //YOUR CLIENT CODE
 string Password = ""; //YOUR PASSWORD
 string api_key = "";
-string JWTToken = "";  // optional
+string JWTToken = "“; // optional
 string RefreshToken = ""; // optional
 
 SmartApi connect = new SmartApi(api_key, JWTToken, RefreshToken);
@@ -231,8 +231,8 @@ LogOutResponse lg = obj.LogOutResponse;
 
 Please follow below step in order to implement socket using dot net library
 
-1. Inititalize liberary with crerentials.
-2. Login with user name and password and generate token for connecting scoket.
+1. Initialize library with credentials.
+2. Login with user name and password and generate token for connecting socket.
 3. Connect socket using feedToken, Client_code.
 4. Create a script for required stock watchlist and decide the action for sending script.
 
@@ -282,17 +282,17 @@ static void WriteResult(object sender, MessageEventArgs e)
 
 Please follow below step in order to implement socket using dot net library
 
-1. Inititalize liberary with crerentials.
-2. Login with user name and password and generate token for connecting scoket & placing orders.
+1. Initialize library with credentials.
+2. Login with user name and password and generate token for connecting socket & placing orders.
 3. Connect socket using feedToken, jwtToken, Client_code, api_key.
-4. Send Message for Order_feed and add subsriber to receive mesages.
+4. Send Message for Order_feed and add subscriber to receive messages.
 
 ``` 
- string Client_code = "";  YOUR CLIENT CODE
- string Password = ""; YOUR PAS SWORD
+ string Client_code = "“; //YOUR CLIENT CODE
+ string Password = ""; //YOUR PAS SWORD
  string api_key = "";
- string JWTToken = "";   optional
- string RefreshToken = "";  optional
+ string JWTToken = "“; //optional
+ string RefreshToken = "“; //optional
 
   SmartApi connect = new SmartApi(api_key, JWTToken, RefreshToken);
 
@@ -351,7 +351,7 @@ Please follow below step in order to implement socket using dot net library
 //Function to Receive Message
 static void WriteResult(object sender, MessageEventArgs e)
 {
-  Console.WriteLine("Tick Received : " + e.Message);
+  Console.WriteLine("Tick Received: " + e.Message);
 
 }
 ```
