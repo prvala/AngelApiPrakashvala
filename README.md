@@ -234,7 +234,7 @@ Please follow below step in order to implement socket using dot net library
 1. Initialize library with credentials.
 2. Login with user name and password and generate token for connecting socket.
 3. Connect socket using feedToken, Client_code.
-4. Create a script for required stock watchlist and decide the action for sending script.
+4. Create a script of required stocks to watch and decide the action for sending script.
 
 ```
 string Client_code = "";  YOUR CLIENT CODE
@@ -285,7 +285,7 @@ Please follow below step in order to implement socket using dot net library
 1. Initialize library with credentials.
 2. Login with user name and password and generate token for connecting socket & placing orders.
 3. Connect socket using feedToken, jwtToken, Client_code, api_key.
-4. Send Message for Order_feed and add subscriber to receive messages.
+4. Send Message to get Order_feed and add subscriber to receive messages.
 
 ``` 
  string Client_code = "“; //YOUR CLIENT CODE
