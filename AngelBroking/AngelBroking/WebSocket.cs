@@ -80,7 +80,7 @@ namespace AngelBroking
         {
             try
             {
-                ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
+                //ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
                 if (feedtoken != "" && clientcode != "")
                 {
                     string ConnectionMsg = "{\"task\":\"cn\",\"channel\":\"\",\"token\":\"" + feedtoken + "\",\"user\": \"" + clientcode + "\",\"acctid\":\"" + clientcode + "\"}";

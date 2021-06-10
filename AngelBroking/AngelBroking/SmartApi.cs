@@ -72,7 +72,7 @@ namespace AngelBroking
         {
             try
             {
-                ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
+                //ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
                 HttpWebRequest httpWebRequest = null;
                 httpWebRequest = (HttpWebRequest)WebRequest.Create(URL);
                 if (agr != null)
@@ -124,7 +124,7 @@ namespace AngelBroking
         {
             try
             {
-                ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
+                //ServicePointManager.SecurityProtocol = (SecurityProtocolType)48 | (SecurityProtocolType)192 | (SecurityProtocolType)768 | (SecurityProtocolType)3072;
                 HttpWebRequest httpWebRequest = null;
                 httpWebRequest = (HttpWebRequest)WebRequest.Create(URL);
                 if (agr != null)
