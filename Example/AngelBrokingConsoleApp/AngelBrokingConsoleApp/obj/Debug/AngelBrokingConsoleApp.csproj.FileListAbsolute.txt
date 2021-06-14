@@ -38,7 +38,6 @@ C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\Angel
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Debug\System.Reactive.xml
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Debug\AngelBrokingConsoleApp.csprojAssemblyReference.cache
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Debug\AngelBrokingConsoleApp.exe.config
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Debug\AngelBrokingConsoleApp.csproj.CoreCompileInputs.cache
 C:\Users\devel\Desktop\Latest\protocolissue\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Debug\AngelBrokingConsoleApp.csproj.CopyComplete

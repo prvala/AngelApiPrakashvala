@@ -261,7 +261,7 @@ namespace AngelBrokingConsoleApp
             CandleRequest cdreq = new CandleRequest();
             cdreq.exchange = Constants.EXCHANGE_NSE;
             cdreq.symboltoken = "3045";
-            cdreq.interval = Constants.INTERVAL_MINUTE;
+            cdreq.interval = Constants.INTERVAL_MINUTE;            
             cdreq.fromdate = "2021-02-08 09:00";
             cdreq.todate = "2021-02-08 09:15";
 

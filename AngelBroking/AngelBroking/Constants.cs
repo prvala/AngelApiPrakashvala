@@ -44,6 +44,7 @@ namespace AngelBroking
 
 
         public const string INTERVAL_MINUTE = "ONE_MINUTE";
+        public const string INTERVAL_THREE_MINUTE = "THREE_MINUTE";
         public const string INTERVAL_FIVE_MINUTE = "FIVE_MINUTE";
         public const string INTERVAL_TEN_MINUTE = "TEN_MINUTE";
         public const string INTERVAL_FIFTEEN_MINUTE = "FIFTEEN_MINUTE";
