@@ -17,7 +17,7 @@ namespace AngelBroking
         
         ManualResetEvent receivedEvent = new ManualResetEvent(false);
         int receivedCount = 0;
-        WebsocketClient _ws;
+        WebsocketClient _ws;        
         string _url = "wss://smartapisocket.angelbroking.com/websocket?";
         string _url2 = "wss://omnefeeds.angelbroking.com/NestHtml5Mobile/socket/stream";
 
