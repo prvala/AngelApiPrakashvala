@@ -109,6 +109,7 @@ C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\bin\Releas
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\bin\Release\System.Reactive.xml
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\obj\Release\AngelBroking.csprojAssemblyReference.cache
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\obj\Release\AngelBroking.csproj.CoreCompileInputs.cache
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\obj\Release\AngelBroking.csproj.CopyComplete
 C:\Users\devel\Desktop\Latest\protocolissue\AngelBroking\AngelBroking\obj\Release\AngelBroking.dll
