@@ -358,6 +358,7 @@ namespace AngelBroking
         public string squareoff { get; set; }
         public string stoploss { get; set; }
         public string quantity { get; set; }
+        public string triggerprice { get; set; }
     }
 
     public class ConvertPositionRequest
