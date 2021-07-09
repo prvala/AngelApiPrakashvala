@@ -32,6 +32,7 @@ E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBr
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Release\System.Reactive.xml
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Release\System.Threading.Tasks.Extensions.xml
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Release\AngelBrokingConsoleApp.csprojAssemblyReference.cache
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Release\AngelBrokingConsoleApp.exe.config
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Release\AngelBrokingConsoleApp.csproj.CoreCompileInputs.cache
 E:\projects\AngelBrokingProject\lib792021\Example\AngelBrokingConsoleApp\AngelBrokingConsoleApp\obj\Release\AngelBrokingConsoleApp.csproj.CopyComplete
