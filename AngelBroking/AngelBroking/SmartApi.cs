@@ -452,6 +452,13 @@ namespace AngelBroking
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/order/v1/placeOrder";
 
+                        if (order.triggerprice == null || order.triggerprice == "")
+                            order.triggerprice = "0";
+                        if (order.squareoff == null || order.squareoff == "")
+                            order.squareoff = "0";
+                        if (order.stoploss == null || order.stoploss == "")
+                            order.stoploss = "0";
+
                         string PostData = JsonConvert.SerializeObject(order);
 
                         string Json = POSTWebRequest(Token, URL, PostData);
@@ -506,6 +513,13 @@ namespace AngelBroking
                     if (ValidateToken(Token))
                     {
                         string URL = APIURL + "/rest/secure/angelbroking/order/v1/modifyOrder";
+
+                        if (order.triggerprice == null || order.triggerprice == "")
+                            order.triggerprice = "0";
+                        if (order.squareoff == null || order.squareoff == "")
+                            order.squareoff = "0";
+                        if (order.stoploss == null || order.stoploss == "")
+                            order.stoploss = "0";
 
                         string PostData = JsonConvert.SerializeObject(order);
 
