@@ -58,6 +58,7 @@ ord.price = "350.00";
 ord.squareoff = "0";
 ord.stoploss = "0";
 ord.quantity = "10";
+ord.triggerprice = "0";
 
 obj = connect.placeOrder(ord);
 OrderResponse Ores = obj.PlaceOrderResponse;
@@ -78,6 +79,7 @@ mord.price = "357.00";
 mord.squareoff = "0";
 mord.stoploss = "0";
 mord.quantity = "20";
+mord.triggerprice = "0"; 
 
 obj = connect.modifyOrder(mord);
 OrderResponse mOres = obj.ModifyOrderResponse;
@@ -198,8 +200,6 @@ rreq.status = new List<string>();
 rreq.status.Add("NEW");
 rreq.status.Add("CANCELLED");
 rreq.status.Add("ACTIVE");
-rreq.status.Add("SENTTOEXCHANGE");
-rreq.status.Add("FORALL");
 rreq.page = 1;
 rreq.count = 10;
 
