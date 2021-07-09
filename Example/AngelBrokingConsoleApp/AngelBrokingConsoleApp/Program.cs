@@ -16,7 +16,7 @@ namespace AngelBrokingConsoleApp
             //Initialize Samart API using clientcode and password.
 
             string Client_code = "";  //YOUR CLIENT CODE
-            string Password = ""; //YOUR PAS SWORD
+            string Password = ""; //YOUR PASSWORD
             string api_key = "";
             string JWTToken = "";  // optional
             string RefreshToken = ""; // optional
@@ -63,6 +63,7 @@ namespace AngelBrokingConsoleApp
             ord.squareoff = "0";
             ord.stoploss = "0";
             ord.quantity = "10";
+            ord.triggerprice = "0";  //OPTIONAL PARAMETER
             //ord.triggerprice = "350";  //OPTIONAL PARAMETER
 
             obj = connect.placeOrder(ord);
@@ -74,7 +75,7 @@ namespace AngelBrokingConsoleApp
 
             //Modify Order
             OrderInfo mord = new OrderInfo();
-            mord.orderid = "210419000000159";
+            mord.orderid = "210709000852289";
             mord.variety = Constants.VARIETY_NORMAL;
             mord.tradingsymbol = "SBIN-EQ";
             mord.symboltoken = "3045";
@@ -83,10 +84,11 @@ namespace AngelBrokingConsoleApp
             mord.ordertype = Constants.ORDER_TYPE_LIMIT;
             mord.producttype = Constants.PRODUCT_TYPE_DELIVERY;
             mord.duration = Constants.VALIDITY_DAY.ToString();
-            mord.price = "357.00";
+            mord.price = "340.00";
             mord.squareoff = "0";
             mord.stoploss = "0";
             mord.quantity = "20";
+            mord.triggerprice = "0";  //OPTIONAL PARAMETER
             //mord.triggerprice = "357";  //OPTIONAL PARAMETER
 
             obj = connect.modifyOrder(mord);
@@ -98,7 +100,7 @@ namespace AngelBrokingConsoleApp
 
             //cancel Order
             OrderInfo ord2 = new OrderInfo();
-            ord2.orderid = "210419000000159";
+            ord2.orderid = "210709000852289";
             ord2.variety = Constants.VARIETY_NORMAL;
 
             obj = connect.cancelOrder(ord2);
@@ -107,6 +109,7 @@ namespace AngelBrokingConsoleApp
             Console.WriteLine("------cancelOrder call output-------------");
             Console.WriteLine(JsonConvert.SerializeObject(cOrs));
             Console.WriteLine("----------------------------------------------");
+
 
             //get Order Book
             obj = connect.getOrderBook();
@@ -263,7 +266,7 @@ namespace AngelBrokingConsoleApp
             CandleRequest cdreq = new CandleRequest();
             cdreq.exchange = Constants.EXCHANGE_NSE;
             cdreq.symboltoken = "3045";
-            cdreq.interval = Constants.INTERVAL_MINUTE;            
+            cdreq.interval = Constants.INTERVAL_MINUTE;
             cdreq.fromdate = "2021-02-08 09:00";
             cdreq.todate = "2021-02-08 09:15";
 
@@ -281,6 +284,7 @@ namespace AngelBrokingConsoleApp
             Console.WriteLine("------LogOut call output-------------");
             Console.WriteLine(JsonConvert.SerializeObject(lg));
             Console.WriteLine("----------------------------------------------");
+
         }
     }
 }
