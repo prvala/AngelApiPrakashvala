@@ -248,7 +248,7 @@ namespace AngelBrokingConsoleApp
             RuleListRequest rreq = new RuleListRequest();
             rreq.status = new List<string>();
             rreq.status.Add("NEW");
-            rreq.status.Add("CANCELLED");          
+            rreq.status.Add("CANCELLED");
             rreq.page = 1;
             rreq.count = 10;
 
