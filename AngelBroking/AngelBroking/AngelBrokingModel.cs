@@ -189,15 +189,19 @@ namespace AngelBroking
         public string tradingSymbol { get; set; }
         public string exchange { get; set; }
         public string isin { get; set; }
-        public string t1quantity { get; set; }
-        public string realisedquantity { get; set; }
-        public string quantity { get; set; }
-        public string authorisedquantity { get; set; }
-        public string profitandloss { get; set; }
+        public long t1quantity { get; set; }
+        public long realisedquantity { get; set; }
+        public long quantity { get; set; }
+        public long authorisedquantity { get; set; }
+        public decimal profitandloss { get; set; }
         public string product { get; set; }
         public string collateralquantity { get; set; }
         public string collateraltype { get; set; }
-        public string haircut { get; set; }
+        public decimal haircut { get; set; }
+        public decimal averageprice { get; set; }
+        public decimal ltp { get; set; }
+        public decimal close { get; set; }
+        public string symboltoken { get; set; }
     }
 
     public class GetHoldingResponse
@@ -205,7 +209,7 @@ namespace AngelBroking
         public bool status { get; set; }
         public string message { get; set; }
         public string errorcode { get; set; }
-        public HoldingData data { get; set; }
+        public List<HoldingData> data { get; set; }
     }
     public class PositionData
     {
