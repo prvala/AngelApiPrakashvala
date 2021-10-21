@@ -64,7 +64,7 @@ namespace AngelBrokingConsoleApp
             ord.stoploss = "0";
             ord.quantity = "10";
             ord.triggerprice = "0";  //OPTIONAL PARAMETER
-            //ord.triggerprice = "350";  //OPTIONAL PARAMETER
+                                     //ord.triggerprice = "350";  //OPTIONAL PARAMETER
 
             obj = connect.placeOrder(ord);
             OrderResponse Ores = obj.PlaceOrderResponse;
@@ -89,7 +89,7 @@ namespace AngelBrokingConsoleApp
             mord.stoploss = "0";
             mord.quantity = "20";
             mord.triggerprice = "0";  //OPTIONAL PARAMETER
-            //mord.triggerprice = "357";  //OPTIONAL PARAMETER
+                                      //mord.triggerprice = "357";  //OPTIONAL PARAMETER
 
             obj = connect.modifyOrder(mord);
             OrderResponse mOres = obj.ModifyOrderResponse;

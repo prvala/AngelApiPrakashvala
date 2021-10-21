@@ -44,10 +44,10 @@ namespace AngelBroking
         {
             PrivateKey = _PrivateKey;
 
-            AngelToken ag = new AngelToken();
-            ag.jwtToken = _jwtToken;
-            ag.refreshToken = _refreshToken;
-            ag.feedToken = "";
+            this.Token = new AngelToken();
+            this.Token.jwtToken = _jwtToken;
+            this.Token.refreshToken = _refreshToken;
+            this.Token.feedToken = "";
 
             ClientPublicIP = Helpers.GetPublicIPAddress();
             if (ClientPublicIP == "")
