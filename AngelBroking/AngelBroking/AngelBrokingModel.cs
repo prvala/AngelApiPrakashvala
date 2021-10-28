@@ -363,6 +363,9 @@ namespace AngelBroking
         public string stoploss { get; set; }
         public string quantity { get; set; }
         public string triggerprice { get; set; }
+        public string trailingStopLoss { get; set; }
+        public string disclosedquantity { get; set; }
+        public string ordertag { get; set; }
     }
 
     public class ConvertPositionRequest

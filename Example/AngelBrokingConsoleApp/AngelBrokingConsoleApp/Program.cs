@@ -64,7 +64,7 @@ namespace AngelBrokingConsoleApp
             ord.stoploss = "0";
             ord.quantity = "10";
             ord.triggerprice = "0";  //OPTIONAL PARAMETER
-                                     //ord.triggerprice = "350";  //OPTIONAL PARAMETER
+            //ord.triggerprice = "350";  //OPTIONAL PARAMETER            
 
             obj = connect.placeOrder(ord);
             OrderResponse Ores = obj.PlaceOrderResponse;
