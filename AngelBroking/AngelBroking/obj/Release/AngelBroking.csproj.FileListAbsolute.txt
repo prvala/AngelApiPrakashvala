@@ -457,6 +457,7 @@ E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\bin\Releas
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\bin\Release\System.Reactive.xml
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\obj\Release\AngelBroking.csprojAssemblyReference.cache
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\obj\Release\AngelBroking.csproj.CoreCompileInputs.cache
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\obj\Release\AngelBroking.csproj.CopyComplete
 E:\projects\AngelBrokingProject\lib10212021\AngelBroking\AngelBroking\obj\Release\AngelBroking.dll
