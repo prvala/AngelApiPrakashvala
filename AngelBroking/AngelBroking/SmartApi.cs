@@ -458,6 +458,12 @@ namespace AngelBroking
                             order.squareoff = "0";
                         if (order.stoploss == null || order.stoploss == "")
                             order.stoploss = "0";
+                        if (order.trailingStopLoss == null || order.trailingStopLoss == "")
+                            order.trailingStopLoss = "0";
+                        if (order.disclosedquantity == null || order.disclosedquantity == "")
+                            order.disclosedquantity = "0";
+                        if (order.ordertag == null)
+                            order.ordertag = "";
 
                         string PostData = JsonConvert.SerializeObject(order);
 
@@ -520,6 +526,12 @@ namespace AngelBroking
                             order.squareoff = "0";
                         if (order.stoploss == null || order.stoploss == "")
                             order.stoploss = "0";
+                        if (order.trailingStopLoss == null || order.trailingStopLoss == "")
+                            order.trailingStopLoss = "0";
+                        if (order.disclosedquantity == null || order.disclosedquantity == "")
+                            order.disclosedquantity = "0";
+                        if (order.ordertag == null)
+                            order.ordertag = "";
 
                         string PostData = JsonConvert.SerializeObject(order);
 
