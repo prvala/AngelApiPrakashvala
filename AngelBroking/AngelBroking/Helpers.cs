@@ -16,7 +16,7 @@ namespace AngelBroking
             var valueBytes = System.Convert.FromBase64String(value);
             return valueBytes;
         }
-
+//prakash 
         public static string GetLocalIPAddress()
         {
             string ClientLocalIP = "";
